@@ -39,12 +39,14 @@ export default function DriverForm({ initialData, onSubmit, onCancel }) {
 
       {/* Full Name */}
       <div className="mb-4">
-        <label className="block mb-2 font-semibold text-black">Full Name</label>
+        <label className="block mb-2 font-semibold text-black">
+          Name & Prénom
+        </label>
         <input
           {...register("fullname", { required: "Full name is required" })}
           className="w-full border border-indigo-300 rounded-lg px-4 py-2 text-black focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-600 transition"
           type="text"
-          placeholder="Enter full name"
+          placeholder="Enter Nom Complet"
         />
         {errors.fullname && (
           <p className="mt-1 text-sm text-red-600">{errors.fullname.message}</p>
@@ -53,12 +55,12 @@ export default function DriverForm({ initialData, onSubmit, onCancel }) {
 
       {/* ID Number */}
       <div className="mb-4">
-        <label className="block mb-2 font-semibold text-black">ID Number</label>
+        <label className="block mb-2 font-semibold text-black"> CIN</label>
         <input
-          {...register("id_number", { required: "ID number is required" })}
+          {...register("id_number", { required: "le CIN est obligatoire" })}
           className="w-full border border-indigo-300 rounded-lg px-4 py-2 text-black focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-600 transition"
           type="text"
-          placeholder="Enter ID number"
+          placeholder="Num de Carte d'identité"
         />
         {errors.id_number && (
           <p className="mt-1 text-sm text-red-600">
@@ -70,7 +72,7 @@ export default function DriverForm({ initialData, onSubmit, onCancel }) {
       {/* Car Registration */}
       <div className="mb-4">
         <label className="block mb-2 font-semibold text-black">
-          Car Registration
+          Immatriculation
         </label>
         <input
           {...register("car_registration", {
@@ -78,7 +80,7 @@ export default function DriverForm({ initialData, onSubmit, onCancel }) {
           })}
           className="w-full border border-indigo-300 rounded-lg px-4 py-2 text-black focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-600 transition"
           type="text"
-          placeholder="Enter car registration"
+          placeholder="Immatriculation"
         />
         {errors.car_registration && (
           <p className="mt-1 text-sm text-red-600">

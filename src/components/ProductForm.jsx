@@ -34,7 +34,7 @@ export default function ProductForm({ initialData, onSubmit, onCancel }) {
       onSubmit={handleSubmit(onSubmit)}
     >
       <h2 className="text-2xl font-extrabold mb-6 text-indigo-700">
-        {initialData ? "Edit Product" : "Add New Product"}
+        {initialData ? "Edit Produit" : "Ajouter Nouveau Product"}
       </h2>
 
       <div className="mb-4">
@@ -58,7 +58,7 @@ export default function ProductForm({ initialData, onSubmit, onCancel }) {
 
       <div className="mb-4">
         <label className="block mb-2 font-semibold text-indigo-600">
-          Product Name
+          Nom du Produit
         </label>
         <input
           {...register("product_name", {
@@ -97,7 +97,7 @@ export default function ProductForm({ initialData, onSubmit, onCancel }) {
 
       <div className="mb-6">
         <label className="block mb-2 font-semibold text-indigo-600">
-          Stock Quantity
+          Quantité en Stock
         </label>
         <input
           {...register("stock", {

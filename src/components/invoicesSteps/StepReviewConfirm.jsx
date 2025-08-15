@@ -189,7 +189,7 @@ export default function StepReviewConfirm({ data, prevStep, closeWizard }) {
               : "bg-blue-600 hover:bg-blue-700"
           }`}
         >
-          {loading ? "Creating..." : "Create Invoice"}
+          {loading ? "Génération..." : "Générer Facture"}
         </button>
       </div>
     </div>

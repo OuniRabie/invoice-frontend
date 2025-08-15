@@ -76,7 +76,7 @@ export default function StepSelectClient({
                     {c.fullname}
                   </div>
                   <div className="text-xs text-gray-500">
-                    <span className="font-medium">ID:</span> {c.id_number}
+                    <span className="font-medium">CIN:</span> {c.id_number}
                   </div>
                   <div className="text-sm text-gray-700">{c.adresse}</div>
                 </div>
@@ -104,19 +104,19 @@ export default function StepSelectClient({
             onClick={() => setShowForm(true)}
             className="mt-6 w-full py-2 font-semibold bg-green-600 hover:bg-green-700 text-white rounded-lg shadow transition"
           >
-            + Add New Client
+            + Ajouter Nouveau Client
           </button>
 
           {/* Custom Invoice Address */}
           <div className="mt-6">
             <label className="block font-semibold text-black mb-1">
-              Custom Invoice Address (optional)
+              Adresse différente (Autre distination)
             </label>
             <input
               type="text"
               value={data.clientAdresse}
               onChange={(e) => updateData({ clientAdresse: e.target.value })}
-              placeholder="Address to appear on this invoice only"
+              placeholder="Destination Pour cette Facture SEULEMENT"
               className={`${inputBase}`}
             />
           </div>

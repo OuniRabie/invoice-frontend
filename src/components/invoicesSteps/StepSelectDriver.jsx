@@ -74,10 +74,10 @@ export default function StepSelectDriver({
                 >
                   <div className="font-bold text-blue-700">{d.fullname}</div>
                   <div className="text-xs text-gray-500">
-                    ID: {d.id_number} — Car: {d.car_registration}
+                    CIN: {d.id_number} — Voiture: {d.car_registration}
                   </div>
                   <div className="text-sm text-gray-700">
-                    Default Destination: {d.destination}
+                    Destination: {d.destination}
                   </div>
                 </div>
               ))}
@@ -105,13 +105,13 @@ export default function StepSelectDriver({
             onClick={() => setShowForm(true)}
             className="mt-6 w-full py-2 font-semibold bg-green-600 hover:bg-green-700 text-white rounded-lg shadow transition"
           >
-            + Add New Driver
+            + Ajouter Nouveau Chauffeur
           </button>
 
           {/* Custom Destination */}
           <div className="mt-6">
             <label className="block font-semibold text-black mb-1">
-              Custom Destination (optional)
+              Nouvelle Destination (optional)
             </label>
             <input
               type="text"
@@ -119,7 +119,7 @@ export default function StepSelectDriver({
               onChange={(e) =>
                 updateData({ driverDestination: e.target.value })
               }
-              placeholder="Destination for this invoice only"
+              placeholder="Destination Pour cette Facture SEULEMENT "
               className={`${inputBase}`}
             />
           </div>

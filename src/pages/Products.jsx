@@ -63,11 +63,11 @@ export default function Products() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-6">
-      <h1 className="text-2xl font-bold text-gray-800 mb-6">Products</h1>
+      <h1 className="text-2xl font-bold text-gray-800 mb-6">Produits</h1>
 
       {/* Add new product button */}
       <div className="mb-4">
-        <Button onClick={openCreateForm}>Add New Product</Button>
+        <Button onClick={openCreateForm}>Ajouter Nouveau Produit</Button>
       </div>
 
       {loading && <p className="text-gray-500">Loading...</p>}

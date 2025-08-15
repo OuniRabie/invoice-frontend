@@ -1,3 +1,5 @@
+import "../index.css";
+
 import { useEffect, useState } from "react";
 import Button from "../components/Button"; // reuseable button or basic <button>
 import { getInvoices } from "../services/invoiceAPI";
@@ -11,28 +13,27 @@ export default function Invoices() {
 
   const BACKEND_URL =
     import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
-  console.log("VITE API baseURL:", import.meta.env.VITE_API_URL),
-    console.log("BAKEND URL :", import.meta.env.VITE_BACKEND_URL),
-    useEffect(() => {
-      async function fetchData() {
-        setLoading(true);
-        try {
-          const data = await getInvoices();
-          setInvoices(data);
-        } catch (err) {
-          setError(err.message || "Failed to load invoices");
-        } finally {
-          setLoading(false);
-        }
+
+  useEffect(() => {
+    async function fetchData() {
+      setLoading(true);
+      try {
+        const data = await getInvoices();
+        setInvoices(data);
+      } catch (err) {
+        setError(err.message || "Failed to load invoices");
+      } finally {
+        setLoading(false);
       }
-      fetchData();
-    }, []);
+    }
+    fetchData();
+  }, []);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">
       <div className="mb-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Invoices</h1>
-        <Button onClick={() => setWizardOpen(true)}>+ New Invoice</Button>
+        <h1 className="text-2xl font-bold">Facture</h1>
+        <Button onClick={() => setWizardOpen(true)}>+ Nouvelle Facture</Button>
       </div>
 
       {/* Wizard Modal */}
@@ -54,7 +55,7 @@ export default function Invoices() {
           <table className="w-full border border-gray-200 rounded-xl shadow overflow-hidden">
             <thead className="bg-gray-100 text-gray-700">
               <tr>
-                <th className="py-3 px-4 text-left font-semibold">Invoice #</th>
+                <th className="py-3 px-4 text-left font-semibold">Facture #</th>
                 <th className="py-3 px-4 text-left font-semibold">Client</th>
                 <th className="py-3 px-4 text-left font-semibold">Total HT</th>
                 <th className="py-3 px-4 text-left font-semibold">Date</th>
@@ -81,7 +82,7 @@ export default function Invoices() {
                           "_blank"
                         )
                       }
-                      className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 shadow"
+                      className="px-3 py-1 bg-green-600 text-black rounded hover:bg-green-700 shadow"
                     >
                       Download PDF
                     </button>

@@ -98,7 +98,7 @@ export default function StepSelectProducts({
                 onClick={() => addProduct(p)}
                 className="px-3 py-1 bg-green-600 hover:bg-green-700 text-white rounded"
               >
-                Add
+                Ajouter
               </button>
             </div>
           ))}
