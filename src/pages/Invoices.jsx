@@ -9,22 +9,24 @@ export default function Invoices() {
   const [error, setError] = useState(null);
   const [wizardOpen, setWizardOpen] = useState(false);
 
-  const BACKEND_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
-
-  useEffect(() => {
-    async function fetchData() {
-      setLoading(true);
-      try {
-        const data = await getInvoices();
-        setInvoices(data);
-      } catch (err) {
-        setError(err.message || "Failed to load invoices");
-      } finally {
-        setLoading(false);
+  const BACKEND_URL =
+    import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+  console.log("VITE API baseURL:", import.meta.env.VITE_API_URL),
+    console.log("BAKEND URL :", import.meta.env.VITE_BACKEND_URL),
+    useEffect(() => {
+      async function fetchData() {
+        setLoading(true);
+        try {
+          const data = await getInvoices();
+          setInvoices(data);
+        } catch (err) {
+          setError(err.message || "Failed to load invoices");
+        } finally {
+          setLoading(false);
+        }
       }
-    }
-    fetchData();
-  }, []);
+      fetchData();
+    }, []);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">
