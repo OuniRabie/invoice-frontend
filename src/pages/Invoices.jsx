@@ -9,8 +9,7 @@ export default function Invoices() {
   const [error, setError] = useState(null);
   const [wizardOpen, setWizardOpen] = useState(false);
 
-  const BACKEND_URL =
-    import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+  const BACKEND_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   useEffect(() => {
     async function fetchData() {

@@ -5,8 +5,6 @@ import StepSelectDriver from "../components/invoicesSteps/StepSelectDriver";
 import StepInvoiceDetails from "../components/invoicesSteps/StepInvoiceDetails";
 import StepReviewConfirm from "../components/invoicesSteps/StepReviewConfirm";
 
-// later: import StepSelectProducts, StepSelectDriver, StepInvoiceDetails, StepReviewConfirm
-
 export default function InvoiceWizard({ onClose }) {
   const [step, setStep] = useState(0);
 
