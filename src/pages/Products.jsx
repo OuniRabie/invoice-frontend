@@ -93,8 +93,12 @@ export default function Products() {
               >
                 <td className="py-3 px-4">{p.product_code}</td>
                 <td className="py-3 px-4">{p.product_name}</td>
-                <td className="py-3 px-4">{p.price_ht?.toFixed(3)}</td>
-                <td className="py-3 px-4">{p.stock_quantity}</td>
+                <td className="py-3 px-4 text-amber-700 font-bold">
+                  {p.price?.toFixed(3)}
+                </td>
+                <td className="py-3 px-4 text-amber-300 font-bold ">
+                  {p.stock}
+                </td>
                 <td className="py-3 px-4 space-x-2">
                   <button
                     onClick={() => openEditForm(p)}
