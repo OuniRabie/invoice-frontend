@@ -130,12 +130,12 @@ export default function Products() {
               <span className="font-bold text-blue-700">{p.product_name}</span>
               <span className="text-sm text-gray-500">{p.product_code}</span>
             </div>
-            <div className="text-gray-700 mb-1">
+            <div className=" text-amber-700 font-bold mb-1">
               <span className="font-medium">Price HT:</span>{" "}
-              {p.price_ht?.toFixed(3)}
+              {p.price?.toFixed(3)}
             </div>
-            <div className="text-gray-700 mb-3">
-              <span className="font-medium">Stock:</span> {p.stock_quantity}
+            <div className=" text-amber-500 font-bold mb-3">
+              <span className="font-medium">Stock:</span> {p.stock}
             </div>
             <div className="flex gap-2">
               <button

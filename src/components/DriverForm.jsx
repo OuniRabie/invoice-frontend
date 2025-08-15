@@ -34,7 +34,7 @@ export default function DriverForm({ initialData, onSubmit, onCancel }) {
       onSubmit={handleSubmit(onSubmit)}
     >
       <h2 className="text-2xl font-extrabold mb-6 text-blue-700">
-        {initialData ? "Edit Driver" : "Add New Driver"}
+        {initialData ? "Edit Transporteur" : "Ajouter Nouveau Transporteur"}
       </h2>
 
       {/* Full Name */}

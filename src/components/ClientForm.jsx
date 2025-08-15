@@ -34,17 +34,19 @@ export default function ClientForm({ initialData, onSubmit, onCancel }) {
       onSubmit={handleSubmit(onSubmit)}
     >
       <h2 className="text-2xl font-extrabold mb-6 text-blue-700">
-        {initialData ? "Edit Client" : "Add New Client"}
+        {initialData ? "Edit Client" : "Ajouter Nouveau Client"}
       </h2>
 
       {/* Fullname */}
       <div className="mb-4">
-        <label className="block mb-2 font-semibold text-black">Full Name</label>
+        <label className="block mb-2 font-semibold text-black">
+          Nom & Prénom
+        </label>
         <input
           {...register("fullname", { required: "Full name is required" })}
           className="w-full border border-indigo-300 rounded-lg px-4 py-2 text-black focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-600 transition"
           type="text"
-          placeholder="Enter full name"
+          placeholder="Entrer le Nom é le Prénom"
         />
         {errors.fullname && (
           <p className="mt-1 text-sm text-red-600">{errors.fullname.message}</p>
@@ -53,12 +55,12 @@ export default function ClientForm({ initialData, onSubmit, onCancel }) {
 
       {/* ID Number */}
       <div className="mb-4">
-        <label className="block mb-2 font-semibold text-black">ID Number</label>
+        <label className="block mb-2 font-semibold text-black">CIN</label>
         <input
           {...register("id_number", { required: "ID number is required" })}
           className="w-full border border-indigo-300 rounded-lg px-4 py-2 text-black focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-600 transition"
           type="text"
-          placeholder="Enter ID number"
+          placeholder="Entrer le Num De Carte d'identité"
         />
         {errors.id_number && (
           <p className="mt-1 text-sm text-red-600">
@@ -74,7 +76,7 @@ export default function ClientForm({ initialData, onSubmit, onCancel }) {
           {...register("adresse", { required: "Address is required" })}
           className="w-full border border-indigo-300 rounded-lg px-4 py-2 text-black focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-600 transition"
           type="text"
-          placeholder="Enter address"
+          placeholder="Entrer l'address"
         />
         {errors.adresse && (
           <p className="mt-1 text-sm text-red-600">{errors.adresse.message}</p>
@@ -84,7 +86,7 @@ export default function ClientForm({ initialData, onSubmit, onCancel }) {
       {/* Phone Number */}
       <div className="mb-6">
         <label className="block mb-2 font-semibold text-black">
-          Phone Number
+          Num Téléphone
         </label>
         <input
           {...register("phone_number", {
@@ -92,7 +94,7 @@ export default function ClientForm({ initialData, onSubmit, onCancel }) {
           })}
           className="w-full border border-indigo-300 rounded-lg px-4 py-2 text-black focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-600 transition"
           type="text"
-          placeholder="Enter phone number"
+          placeholder="Entrer le Num de Téléphone"
         />
         {errors.phone_number && (
           <p className="mt-1 text-sm text-red-600">
