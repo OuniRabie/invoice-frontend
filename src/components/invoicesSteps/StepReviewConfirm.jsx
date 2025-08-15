@@ -49,6 +49,7 @@ export default function StepReviewConfirm({ data, prevStep, closeWizard }) {
       setSuccess("Invoice created successfully!");
       setTimeout(() => closeWizard(), 1200);
     } catch (err) {
+      console.log(err);
       setError(err.message);
       setLoading(false);
     }
