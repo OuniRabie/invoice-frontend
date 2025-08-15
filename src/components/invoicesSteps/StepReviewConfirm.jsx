@@ -33,6 +33,7 @@ export default function StepReviewConfirm({ data, prevStep, closeWizard }) {
   };
 
   async function handleSubmit() {
+    console.log("VITE API  BUTTON:", import.meta.env.VITE_API_URL);
     setLoading(true);
     setError(null);
     setSuccess(null);
